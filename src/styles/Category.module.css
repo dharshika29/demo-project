@@ -1,0 +1,69 @@
+.categoryWrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* height: 100vh; */
+}
+
+.leftBanner {
+  position: relative;
+  width: 100%;
+  height: 100vh;   /* Image full height area */
+  overflow: hidden;
+}
+
+.leftImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* MAIN FIX */
+  object-position: center; /* Center the focus */
+  filter: brightness(65%);
+}
+
+
+.bannerText {
+  position: absolute;
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* RIGHT SIDE GRID */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-left: 1px solid rgb(57, 56, 56);
+}
+
+.card {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  background: white;
+}
+
+.cardImg {
+  width: 75%;
+  height: auto;
+  margin: 0 auto 10px auto;
+  object-fit: contain;
+}
+
+.card h4 {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+

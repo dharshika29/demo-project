@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/About.module.css";
-import footerImg from "../image/Right colum.png";
+import footerImg from "../image/z10.png";
 import { Link } from "react-router-dom";
 
 const AboutPage = () => {

@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
 import img1 from "../image/img hero.png";
-import img2 from "../image/a1.png";
-import img3 from "../image/a2.png";
-import img4 from "../image/a3.png";
-import img5 from "../image/a4.png";
-import img6 from "../image/a5.png";
+import img2 from "../image/z1.jpg";
+import img3 from "../image/z2.png";
+import img4 from "../image/z3.png";
+import img5 from "../image/z4.png";
+import img6 from "../image/z5.png";
 import AboutPage from "./About";
 import OurService from "./OurService";
-import Footer from "./Footer";
+
 
 const HomePage = () => {
   const items = [
@@ -30,7 +30,7 @@ const HomePage = () => {
     <>
     <div className={styles.page}>
       <main className={styles.grid}>
-        <section className={styles.leftBox}>
+        <section  className={`${styles.leftBox} ${styles.fadeUp}`}>
           <h1>
             Kyiv <br />
             <span className={styles.bold}>LuxeBouquets®</span>
@@ -53,7 +53,7 @@ const HomePage = () => {
           {items.map((item, i) => (
             <div
               key={i}
-              className={`${styles.item} ${
+              className={`${styles.item} ${styles.fadeUp} ${
                 item.type === "image" ? styles.imageBox : styles.textBox
               }`}
             >
@@ -72,7 +72,7 @@ const HomePage = () => {
     </div>
     <AboutPage/>
     <OurService/>
-    <Footer/>
+
     </>
   );
 };

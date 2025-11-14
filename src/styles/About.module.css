@@ -83,7 +83,7 @@
 }
 
 .card {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(59, 58, 58);
   padding: 25px 80px;
 }
 
@@ -115,7 +115,7 @@
 .form input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
 }
 
 .footerImg {
@@ -213,7 +213,7 @@
 .form input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
 }
 
 .footerGrid {

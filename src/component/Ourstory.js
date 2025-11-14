@@ -4,7 +4,8 @@ import imgFounder from "../image/image.png";
 import img1 from "../image/Rectangle 74.png";
 import img2 from "../image/Rectangle 75.png";
 import img3 from "../image/Rectangle 76.png";
-import Footer from "./Footer";
+import { Link } from "react-router-dom";
+
 const OurStory = () => {
   return (
     <>
@@ -17,7 +18,8 @@ const OurStory = () => {
               <h3>Why Kyiv LuxeBouquets</h3>
               <p>
                 Discover Uniquely Crafted Bouquets and Gifts for Any Occasion:
-                Spread <br/>Joy with Our Online Flower Delivery Service
+                Spread <br />
+                Joy with Our Online Flower Delivery Service
               </p>
               <div className={styles.iconRow}>
                 <i className="fa-brands fa-facebook"></i>
@@ -103,10 +105,13 @@ const OurStory = () => {
             ones with <br />
             the perfect gift. Click the button below to start shopping
           </p>
-          <button className={styles.ctaBtn}>Shop Now</button>
+        
+          <Link to="/Category" className={styles.ctaBtn}>
+            Shop Now
+          </Link>
         </div>
       </div>
-      <Footer />
+
     </>
   );
 };

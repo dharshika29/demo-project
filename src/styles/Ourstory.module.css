@@ -6,9 +6,7 @@
 .heroSection {
   display: flex;
   height: 100vh !important;
-
 }
-
 
 .heroLeft {
   flex: 1;
@@ -16,21 +14,17 @@
   align-items: center;
   justify-content: center;
 }
-.p1{
+.p1 {
   padding-top: 10px;
-  font-family: 'Zapfino', sans-serif;
-
+  font-family: "Zapfino", sans-serif;
 }
 .heroLeft1 h2 {
   font-size: 36px;
   font-weight: 600;
-
-  
 }
 
 .heroLeft1 h3 {
   font-size: 29px;
-
 }
 
 .heroLeft1 p {
@@ -38,7 +32,6 @@
   line-height: 1.6;
   margin-bottom: 25px;
 }
-
 
 .iconRow {
   display: flex;
@@ -54,8 +47,8 @@
   align-items: center;
   justify-content: center;
 
-  background: #f1f1f1;   /* circle background */
-  border-radius: 50%;    /* makes it round */
+  background: #f1f1f1; /* circle background */
+  border-radius: 50%; /* makes it round */
 
   cursor: pointer;
   transition: 0.3s ease;
@@ -67,12 +60,9 @@
   color: #fff;
 }
 
-
-
 .heroRight {
   flex: 1;
   overflow: hidden;
-
 }
 
 .heroRight img {
@@ -81,7 +71,6 @@
   object-fit: cover; /* MAKES IMAGE FULL COVER */
   display: block;
 }
-
 
 .iconRow {
   display: flex;
@@ -150,21 +139,26 @@
   font-size: 20px;
   margin-bottom: 20px;
 }
-.ctaSection{
+.ctaSection {
   font-size: 15px;
   line-height: 1.6;
 }
 
-.ctaSection button {
-    background: #111;
-    color: #fff;
-    padding: 14px 65px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
+.ctaSection p {
+ margin-bottom: 30px;
 }
-
+.ctaBtn {
+  text-decoration: none;
+  background: #e3e2e2;
+  color: #000000;
+  padding: 14px 65px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.ctaBtn:hover{
+  background-color: #000;
+  color: white;
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .contentGrid {
