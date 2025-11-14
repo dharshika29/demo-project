@@ -5,7 +5,6 @@ import footerImg from "../image/Right colum.png";
 const AboutPage = () => {
   return (
     <div className={styles.page}>
-      {/* ✅ ABOUT SECTION */}
       <section className={styles.section}>
         <div className={styles.left}>
           <h2>About us</h2>
@@ -26,7 +25,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* ✅ WHY CHOOSE US SECTION */}
       <section className={styles.section}>
         <div className={styles.left}>
           <h2>Why choose us ?</h2>
@@ -45,7 +43,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* ✅ CONTACT SECTION */}
       <section className={styles.section}>
         <div className={styles.left}>
           <h2>To Contact Us</h2>

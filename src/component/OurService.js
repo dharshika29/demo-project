@@ -12,7 +12,6 @@ const OurService = () => {
     <div className={styles.page}>
       <h2 className={styles.title}>Our Service</h2>
 
-      {/* ✅ SERVICE 1 */}
       <section className={styles.section}>
         <div className={styles.left}>
           <img src={img1} alt="Flower Subscriptions" className={styles.image} />
@@ -29,7 +28,6 @@ const OurService = () => {
         </div>
       </section>
 
-      {/* ✅ SERVICE 2 - BACKGROUND IMAGE */}
       <section
         className={styles.sectionBg}
         style={{ backgroundImage: `url(${img2})` }}
@@ -48,7 +46,6 @@ const OurService = () => {
         </div>
       </section>
 
-{/* ✅ CLIENTS SECTION (Carousel) */}
 <section className={styles.clients}>
   <h2>Our Clients say</h2>
 

@@ -45,7 +45,6 @@ const HomePage = () => {
           </div>
         </section>
 
-        {/* ✅ Alternating grid */}
         <section className={styles.rightGrid}>
           {items.map((item, i) => (
             <div
