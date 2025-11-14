@@ -1,0 +1,243 @@
+/* ==== GLOBAL ==== */
+.page {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  color: #111;
+  overflow: hidden;
+}
+
+/* ==== SECTION LAYOUT ==== */
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid black;
+  min-height: 400px;
+}
+
+.left {
+  padding: 60px;
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.left p{
+  font-size: 14px;
+}
+.right {
+  /* padding: 60px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.right1 {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.right p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+
+}
+
+/* ==== BUTTON ==== */
+.btn {
+  /* background: #111; */
+  color: #000000;
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 150px;
+}
+
+.btn:hover {
+  background: #333;
+  color: white;
+}
+
+/* ==== WHY CHOOSE US ==== */
+.rightList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 40px;
+}
+
+.card {
+  border-bottom: 1px solid #ccc;
+  padding: 25px 80px;
+}
+
+.card:last-child {
+  border-bottom: none;
+}
+
+.card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #444;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.right1 p{
+  font-size: 14px;
+}
+/* ==== CONTACT SECTION ==== */
+.form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.footerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-left: 1px solid black;
+}
+
+/* ==== FOOTER ==== */
+.footer {
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px;
+  border-bottom: 1px solid black;
+}
+
+.footerTop div h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.footerTop div p {
+  color: #333;
+}
+
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 40px;
+}
+
+.footerBottom h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+}
+
+.icons span {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icons span:hover {
+  transform: scale(1.2);
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    border-right: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+
+  .right {
+    padding: 30px;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+/* ==== CONTACT SECTION ==== */
+.form {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: 40px;
+}
+
+.box {
+  padding: 30px;
+  border-right: 1px solid black;
+}
+
+.box:last-child {
+  border-right: none;
+}
+
+.box h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.box p {
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 15px;}

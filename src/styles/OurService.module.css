@@ -1,0 +1,254 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  color: #111;
+  border-top: 1px solid black;
+}
+
+/* ==== TITLE ==== */
+.title {
+  text-align: center;
+  padding: 40px 0 20px;
+  font-size: 26px;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+  margin: 0;
+}
+
+/* ==== SECTION (IMAGE + TEXT) ==== */
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid black;
+  min-height: 450px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.left {
+  border-right: 1px solid black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: stretch; /* ensures image fills full height */
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  margin: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.small {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+.right h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.right p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid black;
+  padding: 10px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ==== SECTION 2 (FULL BACKGROUND) ==== */
+.sectionBg {
+  position: relative;
+  border-bottom: 1px solid black;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBlock {
+  color: #fff;
+  text-align: center;
+  max-width: 600px;
+  padding: 40px;
+}
+
+.textBlock h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.textBlock p {
+  line-height: 1.6;
+  margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.btnWhite {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnWhite:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ==== CLIENTS ==== */
+.clients {
+  text-align: center;
+  padding: 60px 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.clients h2 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+blockquote footer {
+  font-style: normal;
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    border-right: none;
+    border-bottom: 1px solid black;
+  }
+
+  .right {
+    padding: 40px 20px;
+  }
+
+  .sectionBg {
+    height: 350px;
+  }
+
+  .textBlock {
+    padding: 20px;
+  }
+}
+
+.clients {
+  text-align: center;
+  padding: 60px 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: #fff;
+}
+
+.clients h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+blockquote {
+  max-width: 700px;
+  margin: 0 auto;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+blockquote footer {
+  font-style: normal;
+  margin-top: 15px;
+  color: #666;
+  font-size: 15px;
+}
+
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #000;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #111;
+}
+/* Move dots below everything */
+.clients .slick-dots {
+  position: relative !important;
+  bottom: -30px !important; /* push dots below */
+  margin-top: 20px;
+}
+
+.clients button {
+  margin-top: 30px; /* move button lower to separate */
+}
