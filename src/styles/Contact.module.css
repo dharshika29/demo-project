@@ -1,0 +1,63 @@
+.divide
+{
+   
+    height: 80px;
+    background-color: rgb(204, 201, 201);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.divide a
+{
+    color: black;
+}
+.divide p{
+    padding: 800px;
+}
+#sp1
+{
+    opacity: 0.2;
+}
+.right
+{
+    display: flex;
+    justify-content: space-between;
+}
+#symbol
+{
+    margin-top: 1%;
+    margin-left: 100%;
+}
+#two
+{
+    margin-left: 16px;
+}
+#con
+{
+    
+    align-items: center;
+}
+#but
+{
+    width: 47%;
+}
+#foot
+{
+    margin-left: 40%;
+    margin-top: 10%;
+}
+#icon
+{
+    margin-left: 2%;
+}
+.connect
+{
+    margin-top: 30px;
+}
+#im{
+    float: right;
+    height: 20px;
+}
+#bt
+{
+   width: 47%;
+}
