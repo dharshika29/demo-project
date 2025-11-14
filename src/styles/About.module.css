@@ -58,13 +58,15 @@
 
 /* ==== BUTTON ==== */
 .btn {
-  /* background: #111; */
+  background: #edeaea;
   color: #000000;
   border: none;
   padding: 10px 25px;
   cursor: pointer;
   transition: 0.3s;
   width: 150px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn:hover {

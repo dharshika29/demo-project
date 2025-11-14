@@ -6,6 +6,9 @@ import img3 from "../image/a2.png";
 import img4 from "../image/a3.png";
 import img5 from "../image/a4.png";
 import img6 from "../image/a5.png";
+import AboutPage from "./About";
+import OurService from "./OurService";
+import Footer from "./Footer";
 
 const HomePage = () => {
   const items = [
@@ -24,6 +27,7 @@ const HomePage = () => {
 
 
   return (
+    <>
     <div className={styles.page}>
       <main className={styles.grid}>
         <section className={styles.leftBox}>
@@ -66,6 +70,10 @@ const HomePage = () => {
         </section>
       </main>
     </div>
+    <AboutPage/>
+    <OurService/>
+    <Footer/>
+    </>
   );
 };
 
