@@ -1,30 +1,110 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 import Navbar from "./component/Navbar";
-// import Contact from "./component/Contact";
 import SignIn from "./component/SignIn";
-import Cart from "./component/Cart";
 import HomePage from "./component/Home";
 import OurStory from "./component/Ourstory";
 import Category from "./component/Category";
 import Footer from "./component/Footer";
 import ProductPage from "./component/Product";
+import ScrollToTop from "./component/ScrollTop";
+import PageTransition from "./component/PageWrapper";
+import { CartProvider } from "./component/CartContext";
+import Cart from "./component/CartPage";
+import Checkout from "./component/Checkout";
+import OrderSummary from "./component/OrderSummary";
+
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<HomePage />} />
+
+        <Route
+          path="/signin"
+          element={
+            <PageTransition>
+              <SignIn />
+            </PageTransition>
+          }
+        />
+
+        <Route
+          path="/cart"
+          element={
+            <PageTransition>
+              <Cart />
+            </PageTransition>
+          }
+        />
+
+        <Route
+          path="/checkout"
+          element={
+            <PageTransition>
+              <Checkout />
+            </PageTransition>
+          }
+        />
+
+        <Route
+          path="/order-summary"
+          element={
+            <PageTransition>
+              <OrderSummary />
+            </PageTransition>
+          }
+        />
+
+        <Route
+          path="/about"
+          element={
+            <PageTransition>
+              <OurStory />
+            </PageTransition>
+          }
+        />
+
+        <Route
+          path="/category"
+          element={
+            <PageTransition>
+              <Category />
+            </PageTransition>
+          }
+        />
+
+        <Route
+          path="/product/:id"
+          element={
+            <PageTransition>
+              <ProductPage />
+            </PageTransition>
+          }
+        />
+      </Routes>
+    </AnimatePresence>
+  );
+}
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/about" element={<OurStory />} />
-        <Route path="/Category" element={<Category />} />
-        <Route path="/product/:id" element={<ProductPage />} />
-      </Routes>
-      <Footer/>
-    </Router>
+    <CartProvider>
+      <Router>
+        <ScrollToTop />
+        <Navbar />
+        <AnimatedRoutes />
+        <Footer />
+      </Router>
+    </CartProvider>
   );
 }
 
