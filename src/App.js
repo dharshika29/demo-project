@@ -6,6 +6,7 @@ import OurService from './component/OurService';
 import Footer from './component/Footer';
 import Contact from './component/Contact';
 import Contact1 from './component/Contact1';
+import Contact2 from './component/Contact2';
 function App() {
   return (
 <>
@@ -16,6 +17,7 @@ function App() {
 <Footer/>
 <Contact/>
 <Contact1/>
+<Contact2/>
 </>
   );
 }

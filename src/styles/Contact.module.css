@@ -61,3 +61,145 @@
 {
    width: 47%;
 }
+.pay
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#pay
+{
+    display: flex;
+    justify-content: space-between;
+}
+/* -------------------- 375px MOBILE VIEW -------------------- */
+@media (max-width: 480px) {
+
+    .container-fluid {
+        padding: 0 !important;
+    }
+
+    .row {
+        flex-direction: column !important;
+    }
+
+    .col {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 15px !important;
+    }
+
+    /* Top bar + cart button style */
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Order summary collapsible style */
+    .show-order-summary {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        background: #f4f4f4;
+        border-radius: 6px;
+        margin-bottom: 20px;
+    }
+
+    /* Hide full order summary (only show inside dropdown) */
+    .right {
+        display: none;
+    }
+
+    /* When expanded – show order summary area */
+    .right.active {
+        display: block !important;
+    }
+
+    /* Input styling */
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-dark,
+    .btn-light {
+        width: 100% !important;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    #but {
+        width: 100% !important;
+        margin: 5px 0;
+    }
+
+    .divide p {
+        padding: 15px !important;
+        font-size: 14px;
+    }
+
+    #foot {
+        text-align: center;
+        margin-top: 30px;
+        margin-left: 0 !important;
+    }
+}
+
+/* -------------------- 768px TABLET VIEW -------------------- */
+@media (max-width: 768px) {
+
+    .row {
+        flex-direction: column !important;
+    }
+
+    .col {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px !important;
+    }
+
+    /* Order summary moves above form */
+    .right {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #con {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #symbol {
+        margin-left: 0 !important;
+        margin-top: 10px;
+        text-align: right;
+    }
+
+    /* Buttons full width */
+    #but,
+    .btn-dark,
+    .btn-light {
+        width: 100% !important;
+        margin-bottom: 12px;
+    }
+
+    /* Input fields full width */
+    input {
+        width: 100% !important;
+    }
+
+    #foot {
+        margin-left: 0 !important;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .divide {
+        height: auto;
+        padding: 10px !important;
+    }
+}
+
