@@ -58,13 +58,15 @@
 
 /* ==== BUTTON ==== */
 .btn {
-  /* background: #111; */
+  background: #edeaea;
   color: #000000;
   border: none;
   padding: 10px 25px;
   cursor: pointer;
   transition: 0.3s;
   width: 150px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -81,7 +83,7 @@
 }
 
 .card {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(59, 58, 58);
   padding: 25px 80px;
 }
 
@@ -113,7 +115,7 @@
 .form input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
 }
 
 .footerImg {
@@ -211,7 +213,7 @@
 .form input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
 }
 
 .footerGrid {

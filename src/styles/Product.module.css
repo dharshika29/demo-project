@@ -1,0 +1,259 @@
+.productWrapper {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+.leftSide,
+.rightSide {
+  width: 50%;
+
+}
+
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.rightSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumb {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* QUANTITY */
+.qtySection {
+  margin-bottom: 30px;
+}
+
+.qtyBox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+.qtyBox button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #333;
+  background: white;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.qtyBox span {
+  font-size: 18px;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* COMBINATIONS */
+.comboSection {
+  margin: 35px 0;
+}
+
+.comboHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.comboSlider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.arrow {
+  border: none;
+  background: #eee;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.comboItems {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.comboCard {
+  min-width: 120px;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.comboCard img {
+  width: 80px;
+  height: auto;
+}
+
+.comboCard p {
+  margin: 8px 0 2px;
+  font-size: 14px;
+}
+
+.comboCard span {
+  font-size: 13px;
+  color: #444;
+}
+
+/* RADIO OPTIONS */
+.priceOptions {
+  margin: 30px 0;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.radioOption input {
+  transform: scale(1.2);
+}
+
+/* ADD BUTTON */
+.addBtn {
+  width: 230px;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background: #000;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.addBtn:hover {
+  background: #333;
+}
+.comboSlider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.arrow {
+  border: none;
+  background: #eee;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comboItems {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+.comboItems::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.comboCard {
+  min-width: 140px;
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.comboCard img {
+  width: 80px;
+  height: auto;
+}
+
+.comboCard p {
+  margin: 8px 0 2px;
+  font-size: 14px;
+}
+
+.comboCard span {
+  font-size: 13px;
+  color: #333;
+}
+/* YOU MAY ALSO LIKE SECTION */
+.recommendSection {
+  margin-top: 60px;
+  text-align: center;
+  margin-bottom: 30px;;
+}
+
+.recommendSection h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.recommendGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 0 40px;
+}
+
+.recommendCard {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.recommendCard img {
+  width: 100%;
+  height: auto;
+}
+
+.recommendCard p {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.recommendCard span {
+  font-size: 14px;
+  color: #666;
+}

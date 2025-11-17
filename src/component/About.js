@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/About.module.css";
-import footerImg from "../image/Right colum.png";
+import footerImg from "../image/z10.png";
+import { Link } from "react-router-dom";
 
 const AboutPage = () => {
   return (
@@ -16,12 +17,15 @@ const AboutPage = () => {
             Kyiv LuxeBouquets crafts stylish, modern bouquets for design and
             aesthetics lovers. We source only the freshest flowers and arrange
             them with care and creativity. Every bouquet is handmade by our
-            experienced florists in our Kyiv workshop.Kyiv LuxeBouquets crafts stylish, modern bouquets for design and
-            aesthetics lovers. We source only the freshest flowers and arrange
-            them with care and creativity. Every bouquet is handmade by our
-            experienced florists in our Kyiv workshop.
+            experienced florists in our Kyiv workshop.Kyiv LuxeBouquets crafts
+            stylish, modern bouquets for design and aesthetics lovers. We source
+            only the freshest flowers and arrange them with care and creativity.
+            Every bouquet is handmade by our experienced florists in our Kyiv
+            workshop.
           </p>
-          <button className={styles.btn}>BUTTON</button>
+          <Link to="/about" className={styles.btn}>
+            ABOUT
+          </Link>
         </div>
       </section>
 
@@ -72,8 +76,6 @@ const AboutPage = () => {
           />
         </div>
       </section>
-
-
     </div>
   );
 };
