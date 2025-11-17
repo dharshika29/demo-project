@@ -5,7 +5,6 @@ import {
   useLocation,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-
 import Navbar from "./component/Navbar";
 import SignIn from "./component/SignIn";
 import HomePage from "./component/Home";
