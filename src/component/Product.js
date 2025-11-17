@@ -1,32 +1,42 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "../styles/Product.module.css";
 
+// Product Images
 import img2 from "../image/z1.jpg";
 import img3 from "../image/z2.png";
 import img4 from "../image/z3.png";
 import img5 from "../image/z4.png";
+import img6 from "../image/z14.png";
+import img7 from "../image/z18.png";
+import img8 from "../image/z15.png";
+import img9 from "../image/z12.png";
 
+// Combo Images
 import c1 from "../image/c1.png";
 import c2 from "../image/c2.png";
 import c3 from "../image/c3.png";
 import c4 from "../image/c4.png";
 import c5 from "../image/c5.png";
+
+// Recommended Images
 import x1 from "../image/x1.png";
 import x2 from "../image/x2.png";
 import x3 from "../image/x3.png";
 import x4 from "../image/x4.png";
 
+// Context
+import { CartContext } from "../component/CartContext";
 
-
-// ⭐ Sample product list
+// ⭐ PRODUCT LIST
 const products = [
   {
     id: 1,
     name: "Snowfall",
     price: 59,
     img: img2,
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at voluptates voluptatum tempora quam nesciunt illo doloremque. Asperiores fuga ex adipisci, molestias suscipit labore laboriosam sapiente delectus. Ratione ut deserunt, culpa quasi aspernatur voluptatum nesciunt, esse veritatis reprehenderit obcaecati nulla, similique quod id officia placeat!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at voluptates voluptatum tempora quam nesciunt illo doloremque.",
   },
   {
     id: 2,
@@ -34,40 +44,50 @@ const products = [
     price: 79,
     img: img3,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at voluptates voluptatum tempora quam nesciunt illo doloremque. Asperiores fuga ex adipisci, molestias suscipit labore laboriosam sapiente delectus. Ratione ut deserunt, culpa quasi aspernatur voluptatum nesciunt, esse veritatis reprehenderit obcaecati nulla, similique quod id officia placeat!",
+      "Soft pastel flowers arranged beautifully for special moments.",
   },
   {
     id: 3,
     name: "Pink Elegance",
     price: 45,
     img: img4,
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at voluptates voluptatum tempora quam nesciunt illo doloremque. Asperiores fuga ex adipisci, molestias suscipit labore laboriosam sapiente delectus. Ratione ut deserunt, culpa quasi aspernatur voluptatum nesciunt, esse veritatis reprehenderit obcaecati nulla, similique quod id officia placeat!,"
+    description: "A charming mix of pink roses and seasonal blooms.",
   },
   {
     id: 4,
     name: "Rustic Charm",
     price: 39,
     img: img5,
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at voluptates voluptatum tempora quam nesciunt illo doloremque. Asperiores fuga ex adipisci, molestias suscipit labore laboriosam sapiente delectus. Ratione ut deserunt, culpa quasi aspernatur voluptatum nesciunt, esse veritatis reprehenderit obcaecati nulla, similique quod id officia placeat"
+    description: "Warm rustic bouquet with natural seasonal flowers.",
   },
+  { id: 5, name: "Rustic Charm", price: 39, img: img6 },
+  { id: 6, name: "Rustic Charm", price: 39, img: img7 },
+  { id: 7, name: "Rustic Charm", price: 38, img: img8 },
+  { id: 8, name: "Rustic Charm", price: 39, img: img9 },
 ];
 
-// ⭐ Scroll functions
+// ⭐ SCROLL LEFT/RIGHT
 const scrollLeft = () => {
-  document
-    .getElementById("comboScroll")
-    .scrollBy({ left: -200, behavior: "smooth" });
+  document.getElementById("comboScroll").scrollBy({
+    left: -200,
+    behavior: "smooth",
+  });
 };
 
 const scrollRight = () => {
-  document
-    .getElementById("comboScroll")
-    .scrollBy({ left: 200, behavior: "smooth" });
+  document.getElementById("comboScroll").scrollBy({
+    left: 200,
+    behavior: "smooth",
+  });
 };
 
 export default function ProductPage() {
+  const navigate = useNavigate();
+  const { addToCart } = useContext(CartContext);
+
   const { id } = useParams();
   const product = products.find((p) => p.id === Number(id));
+
   const [qty, setQty] = useState(1);
 
   if (!product) return <h1>Product Not Found</h1>;
@@ -76,7 +96,7 @@ export default function ProductPage() {
     <>
       {/* MAIN PRODUCT SECTION */}
       <div className={styles.productWrapper}>
-        {/* LEFT SIDE IMAGE */}
+        {/* LEFT IMAGE */}
         <div className={styles.leftSide}>
           <img
             src={product.img}
@@ -105,7 +125,7 @@ export default function ProductPage() {
             </div>
           </div>
 
-          {/* COMBO / CAROUSEL */}
+          {/* COMBO CAROUSEL */}
           <div className={styles.comboSection}>
             <div className={styles.comboHeader}>
               <p>Excellent Combination with:</p>
@@ -148,16 +168,24 @@ export default function ProductPage() {
 
             <label className={styles.radioOption}>
               <input type="radio" name="price" />
-              <span>Subscribe now, and save 25% on this order.</span>
+              <span>Subscribe now & save 25%</span>
             </label>
           </div>
 
           {/* ADD BUTTON */}
-          <button className={styles.addBtn}>ADD TO BASKET</button>
+          <button
+            className={styles.addBtn}
+            onClick={() => {
+              addToCart(product, qty);
+              navigate("/cart");
+            }}
+          >
+            ADD TO BASKET
+          </button>
         </div>
       </div>
 
-      {/* ⭐ YOU MAY ALSO LIKE SECTION ⭐ */}
+      {/* YOU MAY ALSO LIKE */}
       <div className={styles.recommendSection}>
         <h2>You may also like...</h2>
 
@@ -190,4 +218,3 @@ export default function ProductPage() {
     </>
   );
 }
-<p></p>
