@@ -7,7 +7,6 @@ import img6 from "../image/z14.png";
 import img7 from "../image/z18.png";
 import img8 from "../image/z15.png";
 import img9 from "../image/z12.png";
-
 import { Link } from "react-router-dom";
 import styles from "../styles/Category.module.css";
 import hero from "../image/z7.png";

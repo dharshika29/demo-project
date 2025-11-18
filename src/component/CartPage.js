@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { useNavigate } from "react-router-dom";
+
 function Cart() {
   const navigate = useNavigate();
   const { cartItems, removeFromCart, updateQuantity } = useContext(CartContext);
@@ -29,7 +30,6 @@ function Cart() {
             marginTop: "30px",
           }}
         >
-
           <div style={{ flex: 2 }}>
             <table
               style={{
@@ -51,9 +51,8 @@ function Cart() {
               </thead>
 
               <tbody>
-                {cartItems.map((item, index) => (
-                  <tr key={index} style={{ borderBottom: "1px solid #eee" }}>
-
+                {cartItems.map((item) => (
+                  <tr key={item.id} style={{ borderBottom: "1px solid #eee" }}>
                     <td style={td}>
                       <img
                         src={item.img}
@@ -81,9 +80,7 @@ function Cart() {
                           -
                         </button>
 
-                        <span style={{ minWidth: "20px", textAlign: "center" }}>
-                          {item.qty}
-                        </span>
+                        <span>{item.qty}</span>
 
                         <button
                           onClick={() => updateQuantity(item.id, item.qty + 1)}
@@ -115,39 +112,8 @@ function Cart() {
                 ))}
               </tbody>
             </table>
-          </div>
 
-          <div
-            style={{
-              flex: 1,
-              padding: "25px",
-              borderRadius: "12px",
-              border: "1px solid #ddd",
-              boxShadow: "0 4px 10px rgba(0,0,0,0.05)",
-              background: "white",
-            }}
-          >
-            <h2 style={{ marginBottom: "20px" }}>Order Summary</h2>
-            <div style={summaryRow}>
-              <span>Subtotal</span>
-              <strong>${subtotal.toFixed(2)}</strong>
-            </div>
-            <div style={summaryRow}>
-              <span>Shipping</span>
-              <strong>${shipping.toFixed(2)}</strong>
-            </div>
-            <div style={summaryRow}>
-              <span>Tax (8%)</span>
-              <strong>${tax.toFixed(2)}</strong>
-            </div>
-
-            <hr style={{ margin: "20px 0" }} />
-
-            {/* Total */}
-            <div style={summaryRow}>
-              <span style={{ fontSize: "18px", fontWeight: "700" }}>Total</span>
-              <strong style={{ fontSize: "20px" }}>${total.toFixed(2)}</strong>
-            </div>
+            {/* CHECKOUT BUTTON */}
             <button
               style={{
                 marginTop: "25px",
@@ -160,7 +126,7 @@ function Cart() {
                 borderRadius: "8px",
                 cursor: "pointer",
               }}
-              onClick={() => navigate("/checkout")}
+              onClick={() => navigate("/contact")}
             >
               Proceed to Checkout
             </button>
@@ -170,7 +136,6 @@ function Cart() {
     </div>
   );
 }
-
 
 const th = {
   textAlign: "left",
@@ -191,15 +156,6 @@ const qtyBtn = {
   background: "#fff",
   cursor: "pointer",
   borderRadius: "5px",
-  fontSize: "18px",
-  lineHeight: "20px",
-};
-
-const summaryRow = {
-  display: "flex",
-  justifyContent: "space-between",
-  marginBottom: "12px",
-  fontSize: "16px",
 };
 
 export default Cart;

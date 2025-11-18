@@ -1,26 +1,197 @@
+/* NAVBAR BASE */
 .navbar {
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 20px 30px;
-  border-bottom: 1px solid #000;
-  box-sizing: border-box;
-}
-
-.navSection,
-.navSection1 {
-  display: flex;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 20px;
+  padding: 18px 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+  background: #ffffff;
+  position: sticky; /* stays visible */
+  top: 0; /* stick to top */
+  z-index: 1000; /* stays above other content */
 }
 
-.navSection1 {
-  justify-content: flex-end;
-}
-
-.navItem {
-  background: none;
-  border: none;
-  font-size: 15px;
-  cursor: pointer;
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
   text-decoration: none;
+  color: #000;
+  letter-spacing: 1.5px;
+}
+
+/* CENTER NAV LINKS */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* RIGHT SIDE */
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+}
+
+/* NAV ITEMS */
+.navItem {
+  font-size: 15px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding-bottom: 4px;
+  transition: 0.3s ease;
+}
+
+/* Underline animation */
+.navItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+/* HOVER */
+.navItem:hover::after {
+  width: 100%;
+}
+.navItem:hover {
+  opacity: 0.7;
+}
+
+/* ACTIVE LINK → stays highlighted */
+.active {
+  font-weight: 700;
+}
+.active::after {
+  width: 100% !important;
+}
+
+/* CART BUTTON SPECIAL */
+.cartBtn {
+  padding: 7px 14px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+.cartBtn:hover {
+  background: #000;
+  color: #fff;
+}
+/* NAVBAR BASE */
+.navbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 18px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #000;
+  transition: background 0.3s ease, color 0.3s ease, padding 0.3s ease,
+    border 0.3s ease;
+}
+
+/* SCROLLED NAVBAR */
+.scrolled {
+  background: #000000;
+  border-bottom: 1px solid #000;
+  padding: 18px 40px;
+}
+
+.scrolled .navItem,
+.scrolled .logo,
+.scrolled .cartBtn {
+  color: #ffffff;
+}
+
+.scrolled .cartBtn {
+  border-color: #fff;
+}
+
+.scrolled .navItem::after {
+  background: #fff;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 1.5px;
+}
+
+/* CENTER LINKS */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* RIGHT SECTION */
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+}
+
+/* NAV ITEMS */
+.navItem {
+  font-size: 15px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding-bottom: 4px;
+  transition: 0.3s ease;
+}
+
+.navItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.navItem:hover::after {
+  width: 100%;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.active::after {
+  width: 100%;
+}
+
+/* CART BUTTON */
+.cartBtn {
+  padding: 7px 14px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+.cartBtn:hover {
+  transform: scale(1.05);
 }

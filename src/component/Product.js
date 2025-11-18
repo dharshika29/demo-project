@@ -28,7 +28,6 @@ import x4 from "../image/x4.png";
 // Context
 import { CartContext } from "../component/CartContext";
 
-// ⭐ PRODUCT LIST
 const products = [
   {
     id: 1,
@@ -36,7 +35,7 @@ const products = [
     price: 59,
     img: img2,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at voluptates voluptatum tempora quam nesciunt illo doloremque.",
+      "Elegant white arrangement perfect for birthdays and celebrations.",
   },
   {
     id: 2,
@@ -60,11 +59,36 @@ const products = [
     img: img5,
     description: "Warm rustic bouquet with natural seasonal flowers.",
   },
-  { id: 5, name: "Rustic Charm", price: 39, img: img6 },
-  { id: 6, name: "Rustic Charm", price: 39, img: img7 },
-  { id: 7, name: "Rustic Charm", price: 38, img: img8 },
-  { id: 8, name: "Rustic Charm", price: 39, img: img9 },
+  {
+    id: 5,
+    name: "Rustic Charm",
+    price: 39,
+    img: img6,
+    description: "Rustic bouquet with soft tones and premium leaves.",
+  },
+  {
+    id: 6,
+    name: "Rustic Charm",
+    price: 39,
+    img: img7,
+    description: "A modern rustic look with handpicked fresh flowers.",
+  },
+  {
+    id: 7,
+    name: "Rustic Charm",
+    price: 38,
+    img: img8,
+    description: "Simple and elegant rustic-themed floral arrangement.",
+  },
+  {
+    id: 8,
+    name: "Rustic Charm",
+    price: 39,
+    img: img9,
+    description: "Uniquely styled rustic flowers with seasonal greens.",
+  },
 ];
+
 
 // ⭐ SCROLL LEFT/RIGHT
 const scrollLeft = () => {

@@ -4,6 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+
 import { AnimatePresence } from "framer-motion";
 import Navbar from "./component/Navbar";
 import SignIn from "./component/SignIn";
@@ -16,8 +17,8 @@ import ScrollToTop from "./component/ScrollTop";
 import PageTransition from "./component/PageWrapper";
 import { CartProvider } from "./component/CartContext";
 import Cart from "./component/CartPage";
-import Checkout from "./component/Checkout";
-import OrderSummary from "./component/OrderSummary";
+import Payment from "./component/Contact";
+import OrderSuccess from "./component/OrderSuccess";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -37,28 +38,19 @@ function AnimatedRoutes() {
         />
 
         <Route
+          path="/contact"
+          element={
+            <PageTransition>
+              <Payment />
+            </PageTransition>
+          }
+        />
+
+        <Route
           path="/cart"
           element={
             <PageTransition>
               <Cart />
-            </PageTransition>
-          }
-        />
-
-        <Route
-          path="/checkout"
-          element={
-            <PageTransition>
-              <Checkout />
-            </PageTransition>
-          }
-        />
-
-        <Route
-          path="/order-summary"
-          element={
-            <PageTransition>
-              <OrderSummary />
             </PageTransition>
           }
         />
@@ -86,6 +78,16 @@ function AnimatedRoutes() {
           element={
             <PageTransition>
               <ProductPage />
+            </PageTransition>
+          }
+        />
+
+
+        <Route
+          path="/order-success"
+          element={
+            <PageTransition>
+              <OrderSuccess />
             </PageTransition>
           }
         />
