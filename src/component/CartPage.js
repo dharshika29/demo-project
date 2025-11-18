@@ -5,7 +5,6 @@ function Cart() {
   const navigate = useNavigate();
   const { cartItems, removeFromCart, updateQuantity } = useContext(CartContext);
 
-  // Subtotal
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.qty,
     0
@@ -30,7 +29,7 @@ function Cart() {
             marginTop: "30px",
           }}
         >
-          {/* -------------------- CART TABLE -------------------- */}
+
           <div style={{ flex: 2 }}>
             <table
               style={{
@@ -54,7 +53,7 @@ function Cart() {
               <tbody>
                 {cartItems.map((item, index) => (
                   <tr key={index} style={{ borderBottom: "1px solid #eee" }}>
-                    {/* Image */}
+
                     <td style={td}>
                       <img
                         src={item.img}
@@ -63,14 +62,8 @@ function Cart() {
                         style={{ borderRadius: "8px" }}
                       />
                     </td>
-
-                    {/* Name */}
                     <td style={td}>{item.name}</td>
-
-                    {/* Description */}
                     <td style={td}>{item.description}</td>
-
-                    {/* Quantity Controls */}
                     <td style={td}>
                       <div
                         style={{
@@ -101,13 +94,8 @@ function Cart() {
                       </div>
                     </td>
 
-                    {/* Price */}
                     <td style={td}>${item.price}</td>
-
-                    {/* Total */}
                     <td style={td}>${item.price * item.qty}</td>
-
-                    {/* Remove Button */}
                     <td style={td}>
                       <button
                         onClick={() => removeFromCart(item.id)}
@@ -129,7 +117,6 @@ function Cart() {
             </table>
           </div>
 
-          {/* -------------------- ORDER SUMMARY -------------------- */}
           <div
             style={{
               flex: 1,
@@ -141,20 +128,14 @@ function Cart() {
             }}
           >
             <h2 style={{ marginBottom: "20px" }}>Order Summary</h2>
-
-            {/* Subtotal */}
             <div style={summaryRow}>
               <span>Subtotal</span>
               <strong>${subtotal.toFixed(2)}</strong>
             </div>
-
-            {/* Shipping */}
             <div style={summaryRow}>
               <span>Shipping</span>
               <strong>${shipping.toFixed(2)}</strong>
             </div>
-
-            {/* Tax */}
             <div style={summaryRow}>
               <span>Tax (8%)</span>
               <strong>${tax.toFixed(2)}</strong>
@@ -167,8 +148,6 @@ function Cart() {
               <span style={{ fontSize: "18px", fontWeight: "700" }}>Total</span>
               <strong style={{ fontSize: "20px" }}>${total.toFixed(2)}</strong>
             </div>
-
-            {/* Checkout Button */}
             <button
               style={{
                 marginTop: "25px",
@@ -192,7 +171,6 @@ function Cart() {
   );
 }
 
-/* -------------------- STYLES -------------------- */
 
 const th = {
   textAlign: "left",

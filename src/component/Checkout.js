@@ -14,8 +14,6 @@ function Checkout() {
   const shipping = cartItems.length > 0 ? 5.99 : 0;
   const tax = subtotal * 0.08;
   const total = subtotal + shipping + tax;
-
-  // 🔥 SAVE ORDER SUMMARY TO LOCAL STORAGE
   const handlePlaceOrder = () => {
     const orderData = {
       items: cartItems,

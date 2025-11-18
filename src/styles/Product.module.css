@@ -42,7 +42,7 @@
   margin-bottom: 25px;
 }
 
-/* QUANTITY */
+
 .qtySection {
   margin-bottom: 30px;
 }
@@ -70,7 +70,7 @@
   text-align: center;
 }
 
-/* COMBINATIONS */
+
 .comboSection {
   margin: 35px 0;
 }
@@ -128,7 +128,6 @@
   color: #444;
 }
 
-/* RADIO OPTIONS */
 .priceOptions {
   margin: 30px 0;
 }
@@ -145,7 +144,7 @@
   transform: scale(1.2);
 }
 
-/* ADD BUTTON */
+
 .addBtn {
   width: 100%;
   padding: 14px;
@@ -186,11 +185,11 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 10px 0;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
 }
 
 .comboItems::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none; 
 }
 
 .comboCard {
@@ -216,7 +215,6 @@
   font-size: 13px;
   color: #333;
 }
-/* YOU MAY ALSO LIKE SECTION */
 .recommendSection {
   margin-top: 60px;
   text-align: center;

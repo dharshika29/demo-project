@@ -1,7 +1,6 @@
 import React from "react";
 
 function OrderSummary() {
-  // 🔥 Get saved order summary from LocalStorage
   const order = JSON.parse(localStorage.getItem("orderSummary"));
 
   if (!order) {

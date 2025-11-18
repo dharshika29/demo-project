@@ -94,9 +94,7 @@ export default function ProductPage() {
 
   return (
     <>
-      {/* MAIN PRODUCT SECTION */}
       <div className={styles.productWrapper}>
-        {/* LEFT IMAGE */}
         <div className={styles.leftSide}>
           <img
             src={product.img}
@@ -104,8 +102,6 @@ export default function ProductPage() {
             className={styles.mainImage}
           />
         </div>
-
-        {/* RIGHT SIDE */}
         <div className={styles.rightSide}>
           <p className={styles.breadcrumb}>FRESH FLOWERS / {product.name}</p>
 
@@ -114,8 +110,6 @@ export default function ProductPage() {
           </h1>
 
           <p className={styles.description}>{product.description}</p>
-
-          {/* QUANTITY */}
           <div className={styles.qtySection}>
             <p>Quantity</p>
             <div className={styles.qtyBox}>
@@ -124,8 +118,6 @@ export default function ProductPage() {
               <button onClick={() => setQty(qty + 1)}>+</button>
             </div>
           </div>
-
-          {/* COMBO CAROUSEL */}
           <div className={styles.comboSection}>
             <div className={styles.comboHeader}>
               <p>Excellent Combination with:</p>
@@ -158,8 +150,6 @@ export default function ProductPage() {
               </button>
             </div>
           </div>
-
-          {/* PRICE OPTIONS */}
           <div className={styles.priceOptions}>
             <label className={styles.radioOption}>
               <input type="radio" name="price" defaultChecked />
@@ -171,8 +161,6 @@ export default function ProductPage() {
               <span>Subscribe now & save 25%</span>
             </label>
           </div>
-
-          {/* ADD BUTTON */}
           <button
             className={styles.addBtn}
             onClick={() => {
@@ -184,8 +172,6 @@ export default function ProductPage() {
           </button>
         </div>
       </div>
-
-      {/* YOU MAY ALSO LIKE */}
       <div className={styles.recommendSection}>
         <h2>You may also like...</h2>
 

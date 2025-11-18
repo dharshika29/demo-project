@@ -1,4 +1,4 @@
-/* ==== GLOBAL ==== */
+
 .page {
   display: flex;
   flex-direction: column;
@@ -7,7 +7,6 @@
   overflow: hidden;
 }
 
-/* ==== SECTION LAYOUT ==== */
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -32,7 +31,7 @@
   font-size: 14px;
 }
 .right {
-  /* padding: 60px; */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +55,7 @@
 
 }
 
-/* ==== BUTTON ==== */
+
 .btn {
   background: #edeaea;
   color: #000000;
@@ -74,7 +73,6 @@
   color: white;
 }
 
-/* ==== WHY CHOOSE US ==== */
 .rightList {
   display: flex;
   flex-direction: column;
@@ -105,7 +103,7 @@
 .right1 p{
   font-size: 14px;
 }
-/* ==== CONTACT SECTION ==== */
+
 .form {
   display: flex;
   gap: 10px;
@@ -125,7 +123,7 @@
   border-left: 1px solid black;
 }
 
-/* ==== FOOTER ==== */
+
 .footer {
   border-top: 1px solid black;
   display: flex;
@@ -176,7 +174,7 @@
   transform: scale(1.2);
 }
 
-/* ==== RESPONSIVE ==== */
+
 @media (max-width: 768px) {
   .section {
     grid-template-columns: 1fr;
@@ -203,7 +201,7 @@
     text-align: center;
   }
 }
-/* ==== CONTACT SECTION ==== */
+
 .form {
   display: flex;
   gap: 10px;

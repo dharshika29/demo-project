@@ -6,7 +6,7 @@
   border-top: 1px solid black;
 }
 
-/* ==== TITLE ==== */
+
 .title {
   text-align: center;
   padding: 40px 0 20px;
@@ -16,7 +16,7 @@
   margin: 0;
 }
 
-/* ==== SECTION (IMAGE + TEXT) ==== */
+
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -32,7 +32,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: stretch; /* ensures image fills full height */
+  align-items: stretch;
 }
 
 .left img {
@@ -88,7 +88,7 @@
   color: #fff;
 }
 
-/* ==== SECTION 2 (FULL BACKGROUND) ==== */
+
 .sectionBg {
   position: relative;
   border-bottom: 1px solid black;
@@ -142,7 +142,7 @@
   color: #000;
 }
 
-/* ==== CLIENTS ==== */
+
 .clients {
   text-align: center;
   padding: 60px 20px;
@@ -169,7 +169,7 @@ blockquote footer {
   font-size: 14px;
 }
 
-/* ==== RESPONSIVE ==== */
+
 @media (max-width: 768px) {
   .section {
     grid-template-columns: 1fr;
@@ -242,13 +242,13 @@ blockquote footer {
 .slick-dots li.slick-active button:before {
   color: #111;
 }
-/* Move dots below everything */
+
 .clients .slick-dots {
   position: relative !important;
-  bottom: -30px !important; /* push dots below */
+  bottom: -30px !important;
   margin-top: 20px;
 }
 
 .clients button {
-  margin-top: 30px; /* move button lower to separate */
+  margin-top: 30px; 
 }

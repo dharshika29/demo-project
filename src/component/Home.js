@@ -1,3 +1,4 @@
+
 import React from "react";
 import styles from "../styles/Home.module.css";
 import img1 from "../image/img hero.png";
@@ -9,9 +10,11 @@ import img6 from "../image/z5.png";
 import AboutPage from "./About";
 import OurService from "./OurService";
 import { useNavigate } from "react-router-dom";
+import CustomSlider from "./Slider";
 
 const HomePage = () => {
   const navigate = useNavigate();
+
   const items = [
     { type: "text", title: "Fresh Flowers" },
     { type: "image", img: img2 },
@@ -26,8 +29,9 @@ const HomePage = () => {
   ];
 
   return (
-    
     <>
+      <CustomSlider />
+
       <div className={styles.page}>
         <main className={styles.grid}>
           <section className={`${styles.leftBox} ${styles.fadeUp}`}>
@@ -76,6 +80,7 @@ const HomePage = () => {
           </section>
         </main>
       </div>
+
       <AboutPage />
       <OurService />
     </>
