@@ -1,0 +1,66 @@
+.modalBox .modal-content {
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+    padding: 30px !important;
+
+}
+.modal-content {
+  padding: 30px !important;
+}
+.modalContent {
+  text-align: center;
+  padding: 30px !important;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.subText {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.input {
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.continueBtn {
+  width: 100%;
+  background: black;
+  border: none;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.or {
+  margin: 10px 0;
+  color: #666;
+}
+
+.googleBtn,
+.appleBtn {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 12px;
+  background: white;
+  color: black;
+}
+
+.footerLinks {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.footerLinks a {
+  color: gray;
+  text-decoration: none;
+}
