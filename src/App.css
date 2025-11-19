@@ -1,1 +1,36 @@
 
+.accordion-button:not(.collapsed) {
+  color: inherit !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.accordion-item {
+  border: 2px solid grey;
+}
+
+.accordion-button {
+  padding: 1.3rem;
+}
+
+.accordion-button:not(.collapsed)::after {
+  width: 30px !important;
+  height: 30px !important;
+  rotate: 180deg !important;
+  background-image: url("./image/uparrow.png") !important;
+}
+
+.accordion-button::after {
+  width: 30px !important;
+  height: 30px !important;
+  background-image: url("./image/downarrow.png") !important;
+}
+
+@media (max-width: 900px) {
+  .accordian-item {
+    margin: 0rem 2rem !important;
+  }
+  #flush-collapseSix{
+    border-bottom: 1px solid black !important;
+  }
+}

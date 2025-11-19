@@ -1,4 +1,5 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 import styles from "../styles/OurService.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,6 +9,11 @@ import Slider from "react-slick";
 
 
 const OurService = () => {
+  const navigate = useNavigate()
+
+  const gotoSubscription = ()=>{
+    navigate("/subscription")
+  }
   return (
     <div className={styles.page}>
       <h2 className={styles.title}>Our Service</h2>
@@ -19,12 +25,11 @@ const OurService = () => {
         <div className={styles.right}>
           <p className={styles.small}>SERVICE</p>
           <h3>Flower Subscriptions</h3>
-          <p>
-            Experience the convenience and savings of regular flower deliveries
+          <p>Experience the convenience and savings of regular flower deliveries
             with our flexible subscription service — save up to 30% more per
             purchase.
           </p>
-          <button className={styles.btn}>BUTTON</button>
+          <button className={styles.btn} onClick={gotoSubscription}>SUBSCRIPTIONS</button>
         </div>
       </section>
 

@@ -1,0 +1,449 @@
+.Subscription {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+}
+
+/* .right {
+  border-bottom: 1px solid black;
+} */
+
+.list,
+.list p,
+.list ul {
+  padding-top: 10px;
+}
+
+.list ul {
+  line-height: 1.2;
+}
+
+.flower {
+  margin: 5.5rem;
+}
+
+.flower h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.flower p,
+.flower ul li {
+  font-size: 16px;
+}
+
+.flower button {
+  margin-top: 4rem;
+  border-radius: none;
+  padding: 20px 40px;
+  background: none !important;
+  border: 1px solid black !important;
+}
+
+.workFlow {
+  margin: 40px 50px;
+}
+
+.workFlow h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+
+/* Work Flow  */
+
+
+.queries {
+  margin: 40px;
+}
+
+.queries h1 {
+  font-size: 50px;
+
+}
+
+#rows {
+  flex-direction: column;
+}
+
+.plan {
+  padding: 2rem 7rem;
+  border-bottom: 1px solid black !important;
+  border-collapse: collapse;
+}
+
+.plan h1 {
+  font-weight: 400 !important;
+}
+
+.plan p {
+  font-size: 16px;
+}
+
+.choose {
+  border-top: 1px solid black !important;
+  border-left: 1px solid black !important;
+
+}
+
+.selectives {
+  padding: 2rem 3.5rem;
+}
+
+.selectives h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.selectives p {
+  font-size: 16px;
+}
+
+.selectCard {
+  display: flex;
+  margin-top: 40px;
+  overflow: hidden;
+  border: 1px solid #0c0b0b;
+
+}
+
+.selectCard img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.planDetails {
+  padding: 0 30px;
+  width: 50%;
+}
+
+.planDetails h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.planDetails ul {
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.selectBtn {
+  width: 100%;
+  padding: 16px;
+  background: #000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* flower-form-css */
+.flowerForms {
+  margin-top: 4rem;
+
+}
+
+.formContainer {
+  margin: 0 auto;
+  font-family: "Arial", sans-serif;
+}
+
+.formContainer h2 {
+  font-weight: 400 !important;
+  font-size: 1.8rem !important;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.frequencyBox {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.freqButton {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #333 !important;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.active {
+  /* background: #e8e4e4; */
+  color: #000
+}
+
+.line {
+  margin: 40px 0;
+  border: none;
+  border-bottom: 1px solid #000 !important;
+}
+
+.counterBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.counterBtn {
+  padding: 10px 20px;
+  font-size: 20px;
+  border: 1px solid #000 !important;
+  background: #fff;
+  cursor: pointer;
+}
+
+.count {
+  font-size: 18px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.checkout {
+  width: 100%;
+  padding: 18px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+/* FAQ */
+.Subfaq {
+  background-color: #f5f5f7;
+  border-top: 1px solid black;
+  padding: 4rem 0;
+}
+
+.Faq {
+  max-width: 900px;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.faqTitle {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.faqTitle h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+/* Accordion */
+
+.Accordian {
+  max-width: 750px;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+#ab {
+  font-size: 1.2rem !important;
+}
+
+.accordian-item {
+  border: 2px solid black !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: inherit !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (min-width: 320px) and (max-width: 426px) {
+  .flower h1,.workFlow h1,.queries h1,.selectives h1,.faqTitle h1,.Subscription h1{
+    font-size: 30px !important;
+  }
+  .flower{
+    margin: 1rem;
+  }
+  .plan{
+    padding: 1.5rem;
+  }
+  .selectives{
+    padding: 0rem 0rem;
+  }
+  .selectives p{
+    padding: 20px;
+  }
+  .selectives h1,.formContainer h2{
+    padding-left: 20px;
+  }
+  .freqButton{
+    padding: 10px;
+  }
+  .counterBox{
+    margin-left: 10px;
+  }
+  .Subfaq{
+    padding: 0 !important;
+  }
+  .Faq{
+    border: none;
+  }
+  .selectCard{
+    flex-direction: column;
+  }
+    .selectCard img,
+  .planDetails {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .flower button {
+    width: 100%;
+  }
+
+  .Subfaq {
+    padding: 4rem 2rem;
+  }
+
+  .queries {
+    margin-bottom: 4rem;
+
+  }
+.choose{
+  border-left: none !important;
+}
+
+  .right h6 {
+    border-bottom: 1px solid black;
+    margin-top: 4rem;
+  }
+
+  .Subscription {
+    grid-template-columns: 1fr;
+  }
+
+  .rightGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .select-card {
+    flex-direction: column;
+  }
+
+
+}
+
+/*  Laptop */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .Subscription {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flower {
+    margin: 20px;
+  }
+.plan{
+  padding: 2rem 2rem;
+}
+.selectives{
+  padding:1.5rem 1.5rem;
+}
+  .flower h1 {
+    font-size: 30px;
+  }
+
+  .flower p,
+  .flower ul li {
+    font-size: 14px;
+  }
+
+  .list,
+  .list p,
+  .list ul {
+    padding-top: 0px;
+  }
+
+  .flower button {
+    padding: 15px 25px;
+    margin-top: 10px;
+  }
+}
+
+/* large lab */
+@media (min-width: 1200px) {
+  .Subscription {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flower {
+    margin: 2rem;
+  }
+
+  .flower h1 {
+    font-size: 50px;
+  }
+
+  .flower p,
+  .flower ul li {
+    font-size: 17px;
+  }
+
+  .flower button {
+    padding: 20px 40px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width:1949) {
+  .Subscription {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flower h1 {
+    font-size: 50px;
+  }
+
+  .flower p,
+  .flower ul li {
+    font-size: 18px;
+  }
+
+  .list,
+  .list p,
+  .list ul {
+    padding-top: 0px;
+  }
+
+  .flower button {
+    margin-top: 1rem;
+    padding: 25px 50px;
+  }
+}
+
+/* pc */
+@media (min-width: 1950) {
+  .Subscription {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flower h1 {
+    font-size: 60px;
+  }
+
+  .flower p,
+  .flower ul li {
+    font-size: 18px;
+  }
+
+  .flower button {
+    padding: 25px 50px;
+  }
+}

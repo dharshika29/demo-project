@@ -4,7 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-
+import "./App.css"
 import { AnimatePresence } from "framer-motion";
 import Navbar from "./component/Navbar";
 import SignIn from "./component/SignIn";
@@ -19,6 +19,7 @@ import { CartProvider } from "./component/CartContext";
 import Cart from "./component/CartPage";
 import Payment from "./component/Contact";
 import OrderSuccess from "./component/OrderSuccess";
+import Subscription from "./component/Subscription";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -91,6 +92,16 @@ function AnimatedRoutes() {
             </PageTransition>
           }
         />
+        
+        <Route
+          path="/subscription"
+          element={
+            <PageTransition>
+              <Subscription />
+            </PageTransition>
+          }
+        />
+        
       </Routes>
     </AnimatePresence>
   );

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscription Plan</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 40px 0;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    p.subtitle {
+        font-size: 16px;
+        color: #ccc;
+        max-width: 700px;
+    }
+
+    /* PLAN CARDS */
+    .select-card {
+        display: flex;
+        background: #111;
+        border: 1px solid #333;
+        margin-top: 40px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .select-card img {
+        width: 50%;
+        object-fit: cover;
+    }
+
+    .plan-details {
+        padding: 30px;
+        width: 50%;
+    }
+
+    .plan-details h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .plan-details ul {
+        padding-left: 20px;
+        font-size: 16px;
+    }
+
+    .select-btn {
+        width: 100%;
+        padding: 16px;
+        background: #000;
+        border: 1px solid #fff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    /* FREQUENCY BUTTONS */
+    .frequency {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .frequency button {
+        flex: 1;
+        padding: 15px;
+        background: #111;
+        border: 1px solid #333;
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    .frequency button.active {
+        background: #fff;
+        color: #000;
+    }
+
+    /* QUANTITY SELECTOR */
+    .quantity-box {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        width: 150px;
+        border: 1px solid #333;
+    }
+
+    .quantity-box button {
+        width: 40px;
+        background: #111;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 10px 0;
+    }
+
+    .quantity-number {
+        width: 70px;
+        text-align: center;
+        background: #000;
+        padding: 10px 0;
+        font-size: 18px;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
+    }
+
+    /* CHECKOUT */
+    .checkout-btn {
+        margin-top: 40px;
+        width: 100%;
+        padding: 18px;
+        background: #111;
+        border: 1px solid #444;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+        .select-card {
+            flex-direction: column;
+        }
+        .select-card img, .plan-details {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Selecting a Plan</h2>
+    <p class="subtitle">
+        Enjoy free shipping on every order and save up to 30%. Every bouquet is carefully curated to ensure freshness.
+    </p>
+
+    <!-- CLASSIC -->
+    <div class="select-card">
+        <img src="https://via.placeholder.com/500x350" alt="">
+        <div class="plan-details">
+            <h3></h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li>Glass vase with first delivery</li>
+                <li>Save up to 25%</li>
+            </ul>
+            <button class="select-btn">SELECT</button>
+        </div>
+    </div>
+
+    <!-- SEASONAL -->
+    <div class="select-card">
+        <img src="https://via.placeholder.com/500x350" alt="">
+        <div class="plan-details">
+            <h3>Seasonal</h3>
+            <ul>
+                <li></li>
+                <li>Free Delivery</li>
+                <li>Best seasonal selections</li>
+                <li>Glass vase with first delivery</li>
+                <li>Luxury candle included</li>
+                <li>Save up to 28%</li>
+            </ul>
+            <button class="select-btn">SELECT</button>
+        </div>
+    </div>
+
+    <!-- LUXE -->
+    <div class="select-card">
+        <img src="https://via.placeholder.com/500x350" alt="">
+        <div class="plan-details">
+            <h3>Luxe</h3>
+            <ul>
+                <li>Price $95</li>
+                <li>Free Delivery</li>
+                <li>Premium arrangement</li>
+                <li>Premium vase with first delivery</li>
+                <li>Luxury candle included</li>
+                <li>Save up to 30%</li>
+            </ul>
+            <button class="select-btn">SELECT</button>
+        </div>
+    </div>
+
+    <hr style="margin: 50px 0; border-color:#333">
+
+    <h2>How often do you want flowers delivered?</h2>
+    <p class="subtitle">Select the delivery frequency</p>
+
+    <div class="frequency">
+        <button onclick="setFrequency(this)">MONTHLY</button>
+        <button onclick="setFrequency(this)">BI-WEEKLY</button>
+        <button onclick="setFrequency(this)">WEEKLY</button>
+    </div>
+
+    <h2 style="margin-top:40px">How many deliveries would you like?</h2>
+    <p class="subtitle">Pay once and do not worry about flowers.</p>
+
+    <div class="quantity-box">
+        <button onclick="changeQty(-1)">−</button>
+        <div id="qty" class="quantity-number">1</div>
+        <button onclick="changeQty(1)">+</button>
+    </div>
+
+    <button class="checkout-btn">CHECKOUT</button>
+
+</div>
+
+<script>
+    // Frequency Button Selection
+    function setFrequency(btn) {
+        document.querySelectorAll(".frequency button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+    }
+
+    // Quantity Selector
+    function changeQty(value) {
+        let qty = document.getElementById("qty");
+        let num = parseInt(qty.innerText);
+
+        num += value;
+        if (num < 1) num = 1;
+
+        qty.innerText = num;
+    }
+</script>
+
+</body>
+</html>
