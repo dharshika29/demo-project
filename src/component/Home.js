@@ -10,7 +10,7 @@ import img6 from "../image/z5.png";
 import AboutPage from "./About";
 import OurService from "./OurService";
 import { useNavigate } from "react-router-dom";
-import CustomSlider from "./Slider";
+// import CustomSlider from "./Slider";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const HomePage = () => {
 
   return (
     <>
-      <CustomSlider />
+      {/* <CustomSlider /> */}
 
       <div className={styles.page}>
         <main className={styles.grid}>

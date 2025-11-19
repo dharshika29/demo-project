@@ -7,7 +7,7 @@ const OrderSuccess = () => {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <img
-          src="https://i.gifer.com/embedded/download/7efs.gif"
+          src="https://cdn.dribbble.com/userupload/22860211/file/original-f81a064afd746f2910762383d32b4f15.gif"
           alt="success"
           className={styles.gif}
         />
