@@ -1,4 +1,4 @@
-/* ==== GLOBAL ==== */
+
 .page {
   display: flex;
   flex-direction: column;
@@ -7,7 +7,6 @@
   overflow: hidden;
 }
 
-/* ==== SECTION LAYOUT ==== */
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -32,7 +31,7 @@
   font-size: 14px;
 }
 .right {
-  /* padding: 60px; */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,15 +55,17 @@
 
 }
 
-/* ==== BUTTON ==== */
+
 .btn {
-  /* background: #111; */
+  background: #edeaea;
   color: #000000;
   border: none;
   padding: 10px 25px;
   cursor: pointer;
   transition: 0.3s;
   width: 150px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -72,7 +73,6 @@
   color: white;
 }
 
-/* ==== WHY CHOOSE US ==== */
 .rightList {
   display: flex;
   flex-direction: column;
@@ -81,7 +81,7 @@
 }
 
 .card {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(59, 58, 58);
   padding: 25px 80px;
 }
 
@@ -103,7 +103,7 @@
 .right1 p{
   font-size: 14px;
 }
-/* ==== CONTACT SECTION ==== */
+
 .form {
   display: flex;
   gap: 10px;
@@ -113,7 +113,7 @@
 .form input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
 }
 
 .footerImg {
@@ -123,7 +123,7 @@
   border-left: 1px solid black;
 }
 
-/* ==== FOOTER ==== */
+
 .footer {
   border-top: 1px solid black;
   display: flex;
@@ -174,7 +174,7 @@
   transform: scale(1.2);
 }
 
-/* ==== RESPONSIVE ==== */
+
 @media (max-width: 768px) {
   .section {
     grid-template-columns: 1fr;
@@ -201,7 +201,7 @@
     text-align: center;
   }
 }
-/* ==== CONTACT SECTION ==== */
+
 .form {
   display: flex;
   gap: 10px;
@@ -211,7 +211,7 @@
 .form input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
 }
 
 .footerGrid {

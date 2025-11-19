@@ -5,7 +5,6 @@ import { FaInstagram, FaPinterestP, FaFacebookF, FaTwitter, FaPaperPlane } from 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      {/* COLUMN 1 */}
       <div className={styles.col}>
         <p>
           Remember to offer beautiful flowers from Kyiv LuxeBouquets Valentines Day,
@@ -17,8 +16,6 @@ const Footer = () => {
           <button>REMIND</button>
         </div>
       </div>
-
-      {/* COLUMN 2 */}
       <div className={styles.col}>
         <h4>Contact Us</h4>
         <p>
@@ -42,8 +39,6 @@ const Footer = () => {
           <FaPaperPlane />
         </div>
       </div>
-
-      {/* COLUMN 3 */}
       <div className={styles.col}>
         <h4>Shop</h4>
         <ul>
@@ -61,8 +56,6 @@ const Footer = () => {
           <li>Wedding & Event Decor</li>
         </ul>
       </div>
-
-      {/* COLUMN 4 */}
       <div className={styles.col}>
         <h4>About Us</h4>
         <ul>

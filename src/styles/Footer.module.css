@@ -6,6 +6,12 @@
   font-family: "Poppins", sans-serif;
   color: #111;
 }
+.footer {
+  clear: both;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
 
 .col {
   padding: 40px 30px;

@@ -1,17 +1,63 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
-  return (
-    <header className={styles.navbar}>
-      <div className={styles.navSection}>
-        <button className={styles.navItem}>Shop</button>
-        <button className={styles.navItem}>Contact</button>
-      </div>
+  const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
 
-      <div className={styles.navSection1}>
-        <button className={styles.navItem}>Sign in</button>
-        <button className={styles.navItem}>Cart</button>
+  const isActive = (path) => location.pathname === path;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
+      <Link to="/" className={styles.logo}>..SHOP..</Link>
+
+      <nav className={styles.links}>
+        <Link
+          to="/"
+          className={`${styles.navItem} ${isActive("/") ? styles.active : ""}`}
+        >
+          Home
+        </Link>
+
+        <Link
+          to="/contact"
+          className={`${styles.navItem} ${isActive("/contact") ? styles.active : ""}`}
+        >
+          Contact
+        </Link>
+
+        <Link
+          to="/about"
+          className={`${styles.navItem} ${isActive("/about") ? styles.active : ""}`}
+        >
+          About
+        </Link>
+      </nav>
+
+      <div className={styles.right}>
+        <Link
+          to="/signin"
+          className={`${styles.navItem} ${isActive("/signin") ? styles.active : ""}`}
+        >
+          Sign in
+        </Link>
+
+        <Link to="/cart" className={styles.cartBtn}>Cart</Link>
       </div>
     </header>
   );
