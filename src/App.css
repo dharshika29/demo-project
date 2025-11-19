@@ -27,14 +27,14 @@
 .accordion-button:not(.collapsed)::after {
   width: 30px !important;
   height: 30px !important;
-  rotate: 90deg !important;
-  background-image: url("./image/downarrow.png");
+  rotate: 180deg !important;
+  background-image: url("./image/uparrow.png") !important;
 }
 
 .accordion-button::after {
   width: 30px !important;
   height: 30px !important;
-  background-image: url("./image/downarrow.png");
+  background-image: url("./image/downarrow.png") !important;
 }
 
 @media (max-width: 900px) {

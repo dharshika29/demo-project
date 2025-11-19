@@ -149,8 +149,7 @@ export default function Subscription() {
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </div>    
             <div className={styles.Subscription} style={{ marginBottom: "2rem" }}>
                 <div className={styles.left}>
                     <div className={styles.rose}>
